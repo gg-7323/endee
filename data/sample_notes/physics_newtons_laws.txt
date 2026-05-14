@@ -1,0 +1,189 @@
+Chapter 3: Newton's Laws of Motion
+Physics - Class 11
+
+======================================
+3.1 INTRODUCTION
+======================================
+
+Motion is one of the most common phenomena we observe in everyday life. 
+From the movement of a ball to the orbit of planets, motion is governed by 
+a set of fundamental laws discovered by Sir Isaac Newton in 1687.
+
+Newton published three laws of motion in his landmark work "Philosophiæ 
+Naturalis Principia Mathematica". These laws form the foundation of 
+classical mechanics.
+
+======================================
+3.2 NEWTON'S FIRST LAW (Law of Inertia)
+======================================
+
+Statement: An object at rest stays at rest, and an object in motion 
+stays in motion with the same speed and in the same direction, UNLESS 
+acted upon by an unbalanced external force.
+
+Key Concept - INERTIA:
+Inertia is the tendency of an object to resist changes in its state of motion.
+The greater the mass of an object, the greater its inertia.
+
+Examples:
+- A book lying on a table remains at rest until someone pushes it.
+- A ball rolling on a frictionless surface would roll forever.
+- Passengers lurch forward when a bus suddenly brakes (their body 
+  tends to stay in motion while the bus stops).
+- A tablecloth pulled quickly leaves the dishes behind.
+
+Inertia of rest: Object remains at rest until a force acts on it.
+Inertia of motion: Object in uniform motion continues unless a force changes it.
+Inertia of direction: Object moving in a straight line continues unless a force deflects it.
+
+======================================
+3.3 NEWTON'S SECOND LAW (Law of Force and Acceleration)
+======================================
+
+Statement: The acceleration of an object is directly proportional to the 
+net force acting on it and inversely proportional to its mass.
+
+Mathematical Form:
+    F = ma
+
+Where:
+  F = Net force (measured in Newtons, N)
+  m = Mass of the object (measured in kilograms, kg)
+  a = Acceleration produced (measured in m/s²)
+
+Important Points:
+1. Force and acceleration are vector quantities (they have direction).
+2. The net force is the vector sum of all forces acting on the object.
+3. 1 Newton = the force needed to accelerate 1 kg mass by 1 m/s².
+4. If net force is zero, acceleration is zero (object moves at constant velocity).
+
+Momentum (p):
+Momentum is defined as the product of mass and velocity.
+    p = mv
+
+Newton's Second Law can also be written as:
+    F = dp/dt (rate of change of momentum)
+
+This form is more general and applies even when mass is changing.
+
+Example Problem:
+A 5 kg object is pushed with a force of 20 N. What is its acceleration?
+Solution: a = F/m = 20/5 = 4 m/s²
+
+======================================
+3.4 NEWTON'S THIRD LAW (Law of Action and Reaction)
+======================================
+
+Statement: For every action, there is an equal and opposite reaction.
+
+When object A exerts a force on object B, object B simultaneously 
+exerts an equal and opposite force back on object A.
+
+Important Note: Action and reaction forces act on DIFFERENT objects, 
+so they do NOT cancel each other out.
+
+Examples:
+- Walking: Your foot pushes backward on the ground (action); 
+  the ground pushes your foot forward (reaction).
+- Rocket propulsion: Gases are expelled downward (action); 
+  rocket moves upward (reaction).
+- Swimming: Swimmer pushes water backward (action); 
+  water pushes swimmer forward (reaction).
+- Gun recoil: Bullet is pushed forward (action); 
+  gun kicks backward (reaction).
+
+======================================
+3.5 FRICTION
+======================================
+
+Friction is a force that opposes relative motion between surfaces in contact.
+
+Types of Friction:
+1. Static Friction (fs): Friction between surfaces at rest relative to each other.
+   - Maximum static friction = μs × N
+   - μs = coefficient of static friction
+   - N = Normal force
+
+2. Kinetic Friction (fk): Friction between surfaces in relative motion.
+   - Kinetic friction = μk × N
+   - μk = coefficient of kinetic friction
+   - μk < μs always (kinetic friction is less than maximum static friction)
+
+3. Rolling Friction: Friction when an object rolls over a surface.
+   - Much smaller than sliding friction.
+
+Laws of Friction:
+- Friction is independent of the area of contact.
+- Friction depends on the nature of surfaces in contact.
+- Kinetic friction is independent of speed (for moderate speeds).
+
+======================================
+3.6 FREE BODY DIAGRAMS
+======================================
+
+A Free Body Diagram (FBD) is a diagram showing all forces acting on a single object.
+
+Steps to draw FBD:
+1. Isolate the object from its surroundings.
+2. Draw the object as a simple dot or box.
+3. Draw all forces acting ON the object as arrows.
+4. Label each force with its magnitude and direction.
+
+Common forces to include:
+- Weight (W = mg) — always pointing downward
+- Normal force (N) — perpendicular to the surface
+- Friction force (f) — parallel to surface, opposing motion
+- Applied force (F) — in the direction of push/pull
+- Tension (T) — along the string/rope
+
+======================================
+3.7 EQUILIBRIUM
+======================================
+
+An object is in equilibrium when the net force acting on it is zero.
+
+Types:
+1. Static Equilibrium: Object is at rest and net force = 0
+2. Dynamic Equilibrium: Object moves at constant velocity and net force = 0
+
+Condition for equilibrium:
+    ΣFx = 0  (sum of all forces in x-direction = 0)
+    ΣFy = 0  (sum of all forces in y-direction = 0)
+
+======================================
+SUMMARY — KEY FORMULAS
+======================================
+
+| Formula         | Meaning                          |
+|-----------------|----------------------------------|
+| F = ma          | Newton's Second Law              |
+| p = mv          | Linear Momentum                  |
+| F = dp/dt       | Force as rate of change of p     |
+| W = mg          | Weight of an object              |
+| fs ≤ μs × N     | Static friction                  |
+| fk = μk × N     | Kinetic friction                 |
+| ΣF = 0          | Condition for equilibrium        |
+
+======================================
+IMPORTANT DEFINITIONS
+======================================
+
+Force: A push or pull that can change the state of motion of an object. (Unit: Newton)
+Mass: Amount of matter in an object. Measure of inertia. (Unit: kg)
+Weight: Gravitational force on an object. W = mg (Unit: Newton)
+Momentum: Product of mass and velocity. p = mv (Unit: kg·m/s)
+Inertia: Resistance to change in state of motion.
+Friction: Force opposing relative motion between surfaces.
+Normal Force: Force perpendicular to a surface, preventing objects from passing through it.
+Equilibrium: State where net force on an object is zero.
+
+======================================
+EXAM TIPS
+======================================
+
+1. Always draw a Free Body Diagram before solving any force problem.
+2. Choose a convenient coordinate system (x-y axes).
+3. Remember: Action-reaction pairs act on DIFFERENT objects.
+4. Static friction can take any value from 0 to μs×N.
+5. Weight and Normal force are NOT always equal (only on flat surfaces with no vertical forces).
+6. Newton's laws apply only in inertial (non-accelerating) reference frames.

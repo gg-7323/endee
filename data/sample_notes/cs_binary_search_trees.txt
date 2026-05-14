@@ -1,0 +1,207 @@
+CS201 - Data Structures and Algorithms
+Chapter 5: Trees and Binary Search Trees
+
+======================================
+5.1 INTRODUCTION TO TREES
+======================================
+
+A tree is a non-linear hierarchical data structure consisting of nodes 
+connected by edges. Unlike arrays or linked lists (which are linear), 
+trees represent hierarchical relationships.
+
+Real-world examples of tree structures:
+- File system (folders and subfolders)
+- Organization chart of a company
+- HTML DOM structure of a webpage
+- Family tree / genealogy
+
+Tree Terminology:
+- Root: The topmost node of a tree (has no parent)
+- Node: Each element in the tree containing data
+- Edge: The link/connection between two nodes
+- Parent: A node that has child nodes below it
+- Child: A node that descends from another node
+- Leaf: A node with no children (also called external node)
+- Internal node: A node with at least one child
+- Height: Number of edges on the longest path from root to a leaf
+- Depth: Number of edges from the root to a specific node
+- Subtree: A node and all its descendants
+
+======================================
+5.2 BINARY TREES
+======================================
+
+A Binary Tree is a tree where each node has at most TWO children, 
+referred to as the LEFT child and the RIGHT child.
+
+Properties of Binary Trees:
+- Maximum nodes at level i = 2^i
+- Maximum nodes in a tree of height h = 2^(h+1) - 1
+- Minimum height of a tree with n nodes = ⌊log₂(n)⌋
+
+Types of Binary Trees:
+
+1. Full Binary Tree:
+   Every node has either 0 or 2 children (no node has only 1 child).
+
+2. Complete Binary Tree:
+   All levels are completely filled except possibly the last level, 
+   which is filled from left to right.
+
+3. Perfect Binary Tree:
+   All internal nodes have exactly 2 children AND all leaves are at 
+   the same level.
+
+4. Degenerate (Skewed) Tree:
+   Every node has only one child. Essentially a linked list.
+   - Left-skewed: all nodes have only left child
+   - Right-skewed: all nodes have only right child
+
+======================================
+5.3 BINARY SEARCH TREE (BST)
+======================================
+
+A Binary Search Tree is a binary tree with the following property:
+- All nodes in the LEFT subtree have values LESS than the root.
+- All nodes in the RIGHT subtree have values GREATER than the root.
+- This property holds recursively for every node in the tree.
+
+This ordering property makes BSTs extremely efficient for search operations.
+
+BST Operations and Time Complexities:
+
+| Operation | Average Case | Worst Case |
+|-----------|-------------|------------|
+| Search    | O(log n)    | O(n)       |
+| Insert    | O(log n)    | O(n)       |
+| Delete    | O(log n)    | O(n)       |
+
+Note: Worst case O(n) occurs when the tree is degenerate (like a linked list).
+
+BST Search Algorithm:
+1. Start at the root.
+2. If target == current node, return found.
+3. If target < current node, go to LEFT subtree.
+4. If target > current node, go to RIGHT subtree.
+5. If you reach NULL, the value doesn't exist.
+
+BST Insertion:
+1. Search for the correct position (same as search).
+2. Insert the new node at the NULL position where search ended.
+3. New nodes are always inserted as LEAF nodes.
+
+BST Deletion (three cases):
+Case 1 - Node is a leaf: Simply delete it.
+Case 2 - Node has one child: Replace node with its child.
+Case 3 - Node has two children: 
+   Replace with either:
+   - In-order successor (smallest value in right subtree), OR
+   - In-order predecessor (largest value in left subtree)
+   Then delete the successor/predecessor from its original position.
+
+======================================
+5.4 TREE TRAVERSALS
+======================================
+
+Tree traversal means visiting every node exactly once.
+There are four main traversal methods:
+
+1. IN-ORDER Traversal (Left → Root → Right):
+   - Visits nodes in SORTED (ascending) order in a BST.
+   - Algorithm: 
+     a. Traverse left subtree
+     b. Visit root
+     c. Traverse right subtree
+
+2. PRE-ORDER Traversal (Root → Left → Right):
+   - Used to create a copy of the tree.
+   - Used to get prefix expressions.
+   - Algorithm:
+     a. Visit root
+     b. Traverse left subtree
+     c. Traverse right subtree
+
+3. POST-ORDER Traversal (Left → Right → Root):
+   - Used to delete the tree.
+   - Used to get postfix expressions.
+   - Algorithm:
+     a. Traverse left subtree
+     b. Traverse right subtree
+     c. Visit root
+
+4. LEVEL-ORDER Traversal (BFS):
+   - Visits nodes level by level, left to right.
+   - Uses a QUEUE data structure.
+   - Also called Breadth-First Search (BFS).
+
+Example: For a BST with nodes 4, 2, 6, 1, 3, 5, 7:
+- In-order:    1, 2, 3, 4, 5, 6, 7  (sorted!)
+- Pre-order:   4, 2, 1, 3, 6, 5, 7
+- Post-order:  1, 3, 2, 5, 7, 6, 4
+- Level-order: 4, 2, 6, 1, 3, 5, 7
+
+======================================
+5.5 BALANCED BSTs
+======================================
+
+Problem with simple BST: Can become unbalanced (degenerate), 
+making operations O(n) instead of O(log n).
+
+Solution: Self-Balancing BSTs automatically maintain balance.
+
+AVL Tree:
+- Named after inventors Adelson-Velsky and Landis (1962).
+- Maintains balance factor (BF) = Height(Left subtree) - Height(Right subtree)
+- BF must be -1, 0, or +1 for every node.
+- If BF goes out of range, rotations are performed to re-balance.
+
+Four types of AVL rotations:
+1. Left Rotation (LL case)
+2. Right Rotation (RR case)
+3. Left-Right Rotation (LR case)
+4. Right-Left Rotation (RL case)
+
+Red-Black Tree:
+- Another self-balancing BST.
+- Each node is colored RED or BLACK.
+- Rules ensure no path from root to leaf is more than twice as long as any other.
+- Used in C++ STL (map, set) and Java TreeMap.
+
+======================================
+5.6 APPLICATIONS OF BST
+======================================
+
+1. Database indexing (B-trees, B+ trees are extensions)
+2. Implementation of sets and maps (sorted collections)
+3. Priority queues
+4. Auto-complete and dictionary lookup
+5. Expression parsing (expression trees)
+6. Huffman coding (data compression)
+
+======================================
+SUMMARY - KEY FORMULAS AND FACTS
+======================================
+
+| Concept                         | Detail                       |
+|---------------------------------|------------------------------|
+| BST Search (average)            | O(log n)                     |
+| BST Search (worst)              | O(n) — degenerate tree       |
+| Max nodes at height h           | 2^(h+1) - 1                  |
+| In-order BST gives              | Sorted sequence              |
+| AVL balance factor              | {-1, 0, +1}                  |
+| Queue used in traversal         | Level-order (BFS)            |
+| Stack used in traversal         | In/Pre/Post-order (DFS)      |
+
+======================================
+IMPORTANT DEFINITIONS
+======================================
+
+Binary Tree: Tree where each node has at most 2 children.
+BST: Binary tree where left < root < right for every node.
+Height: Longest path from root to any leaf node.
+Balanced Tree: Tree where height difference between subtrees is minimal.
+AVL Tree: Self-balancing BST with balance factor ∈ {-1, 0, 1}.
+Traversal: Process of visiting every node exactly once.
+In-order: Left → Root → Right traversal.
+Pre-order: Root → Left → Right traversal.
+Post-order: Left → Right → Root traversal.
